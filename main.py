@@ -5,8 +5,12 @@ from subprocess import call
 with open("keywords.json", "r") as jf:
     js = json.load(jf)
 
+print("print help to list comands")
+print()
+
 while True: # main cycle
     stdin = input("--> ")
+    [call(["python", "help.py"]) if stdin == 'help' else None]
     [print('Hi! How r u?') for i in js["hi"] if stdin == i] # hi
     [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in js["time"] if stdin == i] # time
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in js["date"] if stdin == i] # date
