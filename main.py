@@ -19,8 +19,7 @@ while True: # main cycle
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
     [os.system('clear') if stdin == 'clear' or stdin == 'cls' else None] # clear terminal
     [call(["python", "./python/open.py"]) for i in keywords["open"] if stdin == i] # open
+    [call(["python", "./python/calc.py"]) for i in keywords["calc"] if stdin == i] # calc
     if stdin == 'exit': # exit to terminal
         print("byeee")
         break
-    if stdin == 'calc': # calc
-        call(["python", "./python/calc.py"])
