@@ -27,7 +27,7 @@ while True: # main cycle
     [print('Hi! How r u?') for i in keywords["hi"] if stdin == i] # hi
 
     [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in keywords["time"] if stdin == i] # time
-
+    [call(['python', './python/delete.py']) for i in keywords["delete"] if stdin == i]
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
                                                                 # clear 0/1
     [os.system('clear') if users[lastUser["name"]]["os"] == '0'\
