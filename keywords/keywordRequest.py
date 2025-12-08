@@ -3,26 +3,40 @@ import json
 import datetime
 import os
 
+#import databases
 with open('keywords.json', 'r') as js:
     keywords = json.load(js)
 with open('./authentification/lastUser.json', 'r') as js:
     lastUser = json.load(js)
+with open('./authentification/users.json', 'r') as js:
+    users = json.load(js)
+
+#ask users OS
+def osTest(name):
+    os == users[name][os]
+    if os == "0":
+        system = True
+    else:
+        system = False
+    return system
+
+#main loop
 while True:
     stdin = input("--> ") # as user for any commands
 
     [call(["python", "./keywords/help.py"]) if stdin == 'help' else None] # help
 
-    [print('you are as', lastUser["name"], 'authorized') if stdin == 'whoami' else None]
+    [print('you are as', lastUser["name"], 'authorized') if stdin == 'whoami' else None] # whoami
 
     [print('Hi! How r u?') for i in keywords["hi"] if stdin == i] # hi
 
     [print('It is', datetime.datetime.now().strftime("%H:%M")) for i in keywords["time"] if stdin == i] # time
 
-    [call(['python', './keywords/delete.py']) for i in keywords["delete"] if stdin == i]
+    [call(['python', './keywords/delete.py']) for i in keywords["delete"] if stdin == i] # delete account
 
     [print('Today is', datetime.datetime.now().strftime("%d %B of %y")) for i in keywords["date"] if stdin == i] # date
 
-    [os.system('clear') if stdin == 'clear' or stdin == 'cls' else None]
+    [os.system('clear') if osTest == True else os.system('cls') if stdin == 'clear' or stdin == 'cls' else None] # clear
 
     [call(["python", "./keywords/open.py"]) for i in keywords["open"] if stdin == i] # open
 
