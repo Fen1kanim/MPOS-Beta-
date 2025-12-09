@@ -26,6 +26,8 @@ def osTest():
 while True:
     stdin = input("--> ") # as user for any commands
 
+    [call(["python", "./keywords/uranium.py"]) for i in keywords["uranium"] if stdin == i] # uranium
+    
     [call(["python", "./keywords/help.py"]) if stdin == 'help' else None] # help
 
     [print('you are as', lastUser["name"], 'authorized') if stdin == 'whoami' else None] # whoami
