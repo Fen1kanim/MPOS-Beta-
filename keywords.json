@@ -52,6 +52,7 @@
         "cls",
         "clear terminal"
     ],
+
     "whoami": [
         "whoami",
         "who am I authorized as?",
@@ -64,11 +65,16 @@
         "which command can i use",
         "which command can i use?",
         "HELP ME"
-    ]
-    "uran": [
-        "uran",
-        "uranium",
-        "ur anus",
-        "your anus"
+    ],
+
+    "uranium": [
+    	"uran",
+    	"uranium",
+    	"uranium-235",
+    	"uranium-238"
+    ],
+    "random": [
+        "random",
+        "rndm"
     ]
 }
