@@ -51,5 +51,11 @@
         "clear",
         "cls",
         "clear terminal"
+    ],
+    "uranium": [
+    	"uran",
+    	"uranium",
+    	"uranium-235",
+    	"uranium-238"
     ]
 }
