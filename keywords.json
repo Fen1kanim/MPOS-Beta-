@@ -73,14 +73,9 @@
     	"uranium-235",
     	"uranium-238"
     ],
-    "random": [
-        "random",
-        "rndm"
-    ],
-    "doom": [
-        "doom"
-    ],
-    "pong": [
-        "pong"
+    "game": [
+        "game",
+        "open the game menu",
+        "lets play a game"
     ]
 }
