@@ -9,3 +9,7 @@ In keywords directory are all keywords, wich code is longer then one line.
 In ./keywords/keywordRequest.py are all keywords that are one line long.
 
 just run main.py, and it gonna work. I hope.
+
+-----------------------------------------------------------
+
+this project requires the curses module
