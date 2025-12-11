@@ -13,9 +13,6 @@ choose a game(123456): ''')
 [call(["python", "./keywords/games/labyrinth.py"]) if stdin == "1" else None]
 [call(["python", "./keywords/games/guess.py"]) if stdin == '2' else None]
 [call(["python", "./keywords/games/pong.py"]) if stdin == '3' else None]
-[call(["python", "./keywords/games/rockpaperscissors.py"]) if stdin == '4' else None]
+[call(["python", "./keywords/games/rps.py"]) if stdin == '4' else None]
 [call(["python", "./keywords/games/snake.py"]) if stdin == '5' else None]
 [call(["python", "./keywords/games/tictactoe.py"]) if stdin == '6' else None]
-if stdin != '1' or stdin != '2' or stdin != '3' or stdin != '4' or stdin != '5' or stdin != '6':
-    print('''
-try again''')
