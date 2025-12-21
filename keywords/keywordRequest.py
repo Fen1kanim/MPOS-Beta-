@@ -15,28 +15,38 @@ with open('./authentification/users.json', 'r') as js:
 while True:
     stdin = input("--> ") # as user for any commands
 
-    call(["python", "./keywords/games/menu.py"]) if stdin in keywords["game"] else None # game
+    call(["python", "./keywords/games/menu.py"]) \
+    if stdin in keywords["game"] else None # game
 
-    call(["python", "./keywords/uranium.py"]) if stdin in keywords['uranium'] else None # uranium
+    call(["python", "./keywords/uranium.py"]) \
+    if stdin in keywords['uranium'] else None # uranium
 
-    call(["python", "./keywords/help.py"])  if stdin in keywords['help'] else None # help
+    call(["python", "./keywords/help.py"])  if stdin in keywords['help'] else None 
+    # help
 
-    print('you are as', lastUser["name"], 'authorized') if stdin in keywords['whoami'] else None # whoami
+    print('you are as', lastUser["name"], 'authorized') \
+    if stdin in keywords['whoami'] else None # whoami
 
     print('Hi! How r u?')  if stdin in keywords['hi'] else None # hi
 
-    print('It is', datetime.datetime.now().strftime("%H:%M")) if stdin in keywords['time'] else None # time
+    print('It is', datetime.datetime.now().strftime("%H:%M")) \
+    if stdin in keywords['time'] else None # time
 
-    call(['python', './keywords/delete.py']) if stdin in keywords['delete'] else None # delete account
+    call(['python', './keywords/delete.py']) \
+    if stdin in keywords['delete'] else None # delete account
 
-    print('Today is', datetime.datetime.now().strftime("%d %B of %y")) if stdin in keywords['date'] else None # date
+    print('Today is', datetime.datetime.now().strftime("%d %B of %y")) \
+    if stdin in keywords['date'] else None # date
 
     os.system('clear') if stdin in keywords['clear'] else None # clear
 
-    call(["python", "./keywords/open.py"]) if stdin in keywords['open'] else None # open
+    call(["python", "./keywords/open.py"]) if stdin in keywords['open'] else None
+    # open
 
-    call(["python", "./keywords/calc.py"]) if stdin in keywords['calc'] else None # calc
+    call(["python", "./keywords/calc.py"]) if stdin in keywords['calc'] else None
+    # calc
 
+    # unknown command
     if stdin not in keywords['game'] \
     and stdin not in keywords['uranium'] \
     and stdin not in keywords['help'] \
