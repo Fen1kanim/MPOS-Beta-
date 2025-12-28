@@ -3,15 +3,17 @@ import json
 def addingNewUser():
     with open('./authentification/users.json', 'r') as js:
         users = json.load(js)
+    with open('./authentification/lastUser.json', 'r') as js:
+        lastUser = json.load(js)
     name = input('\nusername: ')
     password = input('password: ')
     os = input('''0) Unix (Linux, Macos)
-1) Windows
-
+1) Windows\n\n
 choose your operation system(01): ''')
 
     if os == '0':
-        users[name] = {'password': password, 'os': os}
+        users[name] = {'password': password}
+
         with open('./authentification/users.json', 'w') as js:
             json.dump(users, js, indent = 4)
     elif os == '1':
