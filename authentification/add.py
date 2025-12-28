@@ -13,9 +13,11 @@ choose your operation system(01): ''')
 
     if os == '0':
         users[name] = {'password': password}
-
+        lastUser["name"] = name
         with open('./authentification/users.json', 'w') as js:
             json.dump(users, js, indent = 4)
+        with open('./authentification/lastUser.json', 'w') as js:
+            json.dump(lastUser, js, indent = 4)
     elif os == '1':
         print("you are an idiot, that can`t use a computer\ntry again")
         addingNewUser()
