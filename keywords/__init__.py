@@ -4,3 +4,4 @@ from .delete import delete
 from .help import help
 from .open import open
 from .uranium import uranium
+from .games.menu import game
