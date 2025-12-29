@@ -1,4 +1,3 @@
-from subprocess import call
 import json
 import datetime
 import os
@@ -6,6 +5,7 @@ from keywords.calc import calc
 from keywords.delete import delete
 from keywords.help import help
 from keywords.uranium import uranium
+from keywords.games.menu import game
 
 def keywords():
     #import databases
@@ -20,13 +20,11 @@ def keywords():
     while True:
         stdin = input("--> ") # as user for any commands
 
-        call(["python", "./keywords/games/menu.py"]) \
-        if stdin in keywords["game"] else None # game
+        game() if stdin in keywords["game"] else None # game
 
         uranium() if stdin in keywords['uranium'] else None # uranium
 
-        # help
-        help() if stdin in keywords['help'] else None
+        help() if stdin in keywords['help'] else None # help
 
         print('you are as', lastUser["name"], 'authorized') \
         if stdin in keywords['whoami'] else None # whoami
@@ -43,11 +41,10 @@ def keywords():
 
         os.system('clear') if stdin in keywords['clear'] else None # clear
 
-        open() if stdin in keywords['open'] else None
-        # open
+        open() if stdin in keywords['open'] else None # open
 
-        calc() if stdin in keywords['calc'] else None
-        # calc
+
+        calc() if stdin in keywords['calc'] else None # calc
 
         # unknown command
         if stdin not in keywords['game'] \
