@@ -5,3 +5,5 @@ from .help import help
 from .open import open
 from .uranium import uranium
 from .games.menu import game
+from .games.guess import guess
+from .games.rps import rps
