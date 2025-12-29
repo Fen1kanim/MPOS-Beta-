@@ -1,4 +1,5 @@
-print('''keywords:
+def help():
+    print('''keywords:
 date - show date
 time - show time
 calc - open simple calculator
@@ -10,5 +11,4 @@ open - types a command to terminal
 whoami - shows you how are you authentificated as
 delete - delete youre account
 uranium - irradiates you
-game - opens game menu''')
-print()
+game - opens game menu\n''')

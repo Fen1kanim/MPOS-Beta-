@@ -1,5 +1,5 @@
 import os
 
-prog = input('open: ')
-
-os.system(prog)
+def open():
+    prog = input('open: ')
+    os.system(prog)
