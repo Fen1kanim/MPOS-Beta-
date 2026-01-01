@@ -20,6 +20,7 @@ just run main.py, and it gonna work. I hope.
 **clear** - *clears the terminal*  
 **open** - *the word that you print after, would be printed to terminal*  
 **calc** - *opens a simple calculator*
+**reboot** - *reboots the programm to scratch*  
 
 ### Game menu
 
