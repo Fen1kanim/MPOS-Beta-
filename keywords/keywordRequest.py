@@ -1,11 +1,13 @@
 import json
-import datetime
-import os
 from keywords.calc import calc
 from keywords.delete import delete
 from keywords.help import help
 from keywords.uranium import uranium
 from keywords.games.menu import game
+from keywords.whoami import whoami
+from keywords.time import time
+from keywords.date import date
+from keywords.clear import clear
 
 def keywords():
     #import databases
@@ -26,23 +28,19 @@ def keywords():
 
         help() if stdin in keywords['help'] else None # help
 
-        print('you are as', lastUser["name"], 'authorized') \
-        if stdin in keywords['whoami'] else None # whoami
+        whoami() if stdin in keywords['whoami'] else None # whoami
 
         print('Hi! How r u?')  if stdin in keywords['hi'] else None # hi
 
-        print('It is', datetime.datetime.now().strftime("%H:%M")) \
-        if stdin in keywords['time'] else None # time
+        time() if stdin in keywords['time'] else None # time
 
         delete() if stdin in keywords['delete'] else None # delete account
 
-        print('Today is', datetime.datetime.now().strftime("%d %B of %y")) \
-        if stdin in keywords['date'] else None # date
+        date() if stdin in keywords['date'] else None # date
 
-        os.system('clear') if stdin in keywords['clear'] else None # clear
+        clear() if stdin in keywords['clear'] else None # clear
 
         open() if stdin in keywords['open'] else None # open
-
 
         calc() if stdin in keywords['calc'] else None # calc
 

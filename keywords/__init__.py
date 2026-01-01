@@ -7,3 +7,7 @@ from .uranium import uranium
 from .games.menu import game
 from .games.guess import guess
 from .games.rps import rps
+from .whoami import whoami
+from .time import time
+from .date import date
+from .clear import clear
