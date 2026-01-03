@@ -1,4 +1,4 @@
-def help():
+def helpKW():
     print('''keywords:
 date - show date
 time - show time

@@ -77,5 +77,9 @@
         "game",
         "open the game menu",
         "lets play a game"
+    ],
+    "note": [
+	"note",
+	"take a note"
     ]
 }

@@ -1,5 +1,5 @@
 from auth.add import addingNewUser
-from auth.authentification import auth
+from auth.auth import auth
 def request():
     print('''0) add new user
 1) authentificate

@@ -1,7 +1,7 @@
 from auth import *
 from keywords import *
 
-def startingProg():
+def main():
     # the main programm opens
     name = request()
 
@@ -23,7 +23,8 @@ def startingProg():
 
         if exitOrReboot == 'r':
             print("Rebooting...\n")
+            del name
             startingProg()
 
 if __name__ == "__main__":
-    startingProg()
+    main()

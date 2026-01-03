@@ -3,6 +3,7 @@ import json
 def auth():
     with open("auth/users.json", "r") as js:
         users = json.load(js)
+
     print()
 
     while True:

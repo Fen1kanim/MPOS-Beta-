@@ -1,5 +1,5 @@
 import os
 
-def open():
+def openKW():
     prog = input('open: ')
     os.system(prog)

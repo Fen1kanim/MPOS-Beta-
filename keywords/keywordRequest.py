@@ -1,13 +1,15 @@
 import json
-from keywords.calc import calc
-from keywords.delete import delete
-from keywords.help import help
-from keywords.uranium import uranium
+from keywords.regular.calc import calc
+from keywords.regular.delete import delete
+from keywords.regular.help import helpKW
+from keywords.regular.open import openKW
+from keywords.regular.uranium import uranium
 from keywords.games.menu import game
-from keywords.whoami import whoami
-from keywords.time import time
-from keywords.date import date
-from keywords.clear import clear
+from keywords.regular.whoami import whoami
+from keywords.regular.time import time
+from keywords.regular.date import date
+from keywords.regular.clear import clear
+from keywords.notes.note import *
 
 def keywords(name):
     #import databases
@@ -24,7 +26,7 @@ def keywords(name):
 
         uranium() if stdin in keywords['uranium'] else None # uranium
 
-        help() if stdin in keywords['help'] else None # help
+        helpKW() if stdin in keywords['help'] else None # help
 
         whoami(name) if stdin in keywords['whoami'] else None # whoami
 
@@ -38,9 +40,11 @@ def keywords(name):
 
         clear() if stdin in keywords['clear'] else None # clear
 
-        open() if stdin in keywords['open'] else None # open
+        openKW() if stdin in keywords['open'] else None # open
 
         calc() if stdin in keywords['calc'] else None # calc
+
+        noteMenu(name) if stdin in keywords['note'] else None # note
 
         # unknown command
         if stdin not in keywords['game'] \
@@ -54,6 +58,7 @@ def keywords(name):
         and stdin not in keywords['clear'] \
         and stdin not in keywords['open'] \
         and stdin not in keywords['calc'] \
+        and stdin not in keywords['note'] \
         and stdin != 'reboot' \
         and stdin != 'exit':
             print('sorry, unknown command\ntry again')
