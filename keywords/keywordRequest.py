@@ -10,6 +10,7 @@ from keywords.regular.time import time
 from keywords.regular.date import date
 from keywords.regular.clear import clear
 from keywords.notes.note import *
+from keywords.regular.chpassword import chpassword
 
 def keywords(name):
     #import databases
@@ -46,6 +47,8 @@ def keywords(name):
 
         noteMenu(name) if stdin in keywords['note'] else None # note
 
+        chpassword(name) if stdin in keywords ['chpassword'] else None # chpassword
+
         # unknown command
         if stdin not in keywords['game'] \
         and stdin not in keywords['uranium'] \
@@ -59,6 +62,7 @@ def keywords(name):
         and stdin not in keywords['open'] \
         and stdin not in keywords['calc'] \
         and stdin not in keywords['note'] \
+        and stdin not in keywords['chpassword'] \
         and stdin != 'reboot' \
         and stdin != 'exit':
             print('sorry, unknown command\ntry again')

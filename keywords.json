@@ -81,5 +81,11 @@
     "note": [
 	"note",
 	"take a note"
+    ],
+    "chpassword": [
+	"chpassword",
+	"change password",
+	"pass",
+	"chpass"
     ]
 }

@@ -12,3 +12,4 @@ from .regular.time import time
 from .regular.date import date
 from .regular.clear import clear
 from .notes.note import *
+from .regular.chpassword import chpassword
