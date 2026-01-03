@@ -9,6 +9,10 @@ def addingNewUser():
 1) Windows\n\n
 choose your operation system(01): ''')
 
+    if name in users:
+        print("this username is alredy taken\ntry again")
+        addingNewUser()
+
     if os == '0':
         users[name] = {'password': password}
         with open('./auth/users.json', 'w') as js:
